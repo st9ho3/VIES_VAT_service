@@ -1,29 +1,29 @@
 .form-group {
-  margin-bottom: 15px; /* Adds some space below each form group */
+  margin-bottom: 15px; 
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-group label {
-  display: block; /* Ensures the label takes its own line */
-  margin-bottom: 5px; /* Adds a small space between the label and the input */
-  font-weight: bold; /* Makes the label text bold */
-  color: #333; /* Darker text color for better contrast */
+  display: block; 
+  margin-bottom: 5px;
+  font-weight: bold; 
+  color: #333; 
   
 }
 
 .form-input {
-  width: 20%; /* Makes the input field take up the full width of its parent */
-  padding: 8px 10px; /* Adds internal padding for better text spacing */
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 4px; /* Slightly rounded corners */
-  box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
-  font-size: 16px; /* Sets a readable font size */
+  width: 20%; 
+  padding: 8px 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+  font-size: 16px; 
 }
 
 .form-input:focus {
-  border-color: #007bff; /* Highlights the border when the input is focused */
-  outline: none; /* Removes the default browser outline */
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Adds a subtle blue shadow on focus */
+  border-color: #007bff; 
+  outline: none; 
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .Btn {
