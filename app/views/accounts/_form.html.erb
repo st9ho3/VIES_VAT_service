@@ -1,0 +1,45 @@
+<%= form_with(model: account, data: { controller: "vat-lookup" }, class: "form") do |form| %>  
+  <% if account.errors.any? %>
+    <div style="color: red;">
+      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+      <ul>
+        <% account.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name, style: "display: block;" %>
+    <%= form.text_field :name, data: { vat_lookup_target: "nameInput" }, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :vat, style: "display: block;" %>
+    <%= form.text_field :vat, data: { vat_lookup_target: "vatInput" }, class: "form-input" %>
+    <button class="Btn" type="button" data-vat-lookup-target= "validateButton" data-action="click->vat-lookup#get_vat">Validate VAT</button>
+    <div data-vat-lookup-target="vatMessage"></div>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :city, style: "display: block;" %>
+    <%= form.text_field :city, data: { vat_lookup_target: "cityInput" }, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :zipcode, style: "display: block;" %>
+    <%= form.text_field :zipcode, data: { vat_lookup_target: "zipInput" }, class: "form-input" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address, style: "display: block;" %>
+    <%= form.text_field :address, data: { vat_lookup_target: "streetInput" }, class: "form-input" %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.submit class: "Btn" %>
+  </div>
+<% end %>

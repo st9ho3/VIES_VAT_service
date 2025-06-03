@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+<%= render @account %>
+
+<div class= "acount_manipulation">
+  <%= link_to "Edit", edit_account_path(@account), class: "acc_btn" %> |
+  <%= link_to "Back", accounts_path, class: "acc_btn" %> |
+
+  <%= button_to "Delete", @account, method: :delete, class: "acc_btn" %>
+</div>
+<div/>
+
+

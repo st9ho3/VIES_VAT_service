@@ -1,0 +1,39 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Accounts" %>
+
+<h1>Accounts</h1>
+
+<div id="accounts">
+<% if @accounts.any? %>
+<table>
+<thead>
+    <tr>
+      <th>Name</th>
+      <th>VAT</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Street Address</th>
+      <th></th>
+    </tr>
+  <thead/>
+  <tbody> 
+  <% @accounts.each do |account| %>
+   <tr>
+      <td><%= account.name %></td>
+      <td><%= account.vat %></td>
+      <td><%= account.city %></td>
+      <td><%= account.zipcode %></td>
+      <td><%= account.address %></td>
+      <td><%= link_to "Show", account, class: "acc_btn" %></td>
+      
+    </tr>
+    <%end%>
+  <tbody/>
+  </table>
+  <% else %>
+  <p> There are no Accounts registered <p/>
+  <% end %>
+</div>
+
+<%= link_to "New account", new_account_path, class: "acc_btn" %>

@@ -1,0 +1,59 @@
+l{
+  background-color: transparent;
+  border: none;
+  padding: 0; 
+  margin: 0;
+  color: #007bff; 
+  text-decoration: none; 
+  cursor: pointer;
+  font-size: inherit; 
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline; 
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 10px 10px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: .9rem;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.acount_manipulation {
+	display: flex;
+	gap: .4rem;
+}
+
+.acc_btn {
+  background-color: transparent;
+  border: none;
+  padding: 0; 
+  margin: 0;
+  color: #007bff; 
+  text-decoration: none; 
+  cursor: pointer;
+  font-size: inherit; 
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline; 
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}

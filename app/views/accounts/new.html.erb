@@ -1,0 +1,12 @@
+<% content_for :title, "New account" %>
+
+<h1>New account</h1>
+
+<%= render "form", account: @account %>
+
+<br>
+
+<div >
+    <br>
+  <%= link_to "Back to accounts", accounts_path, class: "acc_btn" %>
+</div>
