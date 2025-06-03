@@ -36,7 +36,7 @@ class VatValidation
   
   private 
 
-  def self.call_API(params) 
+  def self.call_API(params) #Actual method that does the call. 
    conn = Faraday.new(url: API_URI)
 
        conn.post do |req|

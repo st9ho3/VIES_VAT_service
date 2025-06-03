@@ -7,7 +7,7 @@ class VatSendController < ApplicationController
 
     begin
       entity_data = VatValidation.sendVatToValidate(vat_number)
-      puts "This is the #{entity_data}"
+
       # I send the entity_data to vat_lookup_controller.js as response.
       if entity_data["valid"] 
         render json: { valid: true, message: "VAT is valid", body: entity_data }
