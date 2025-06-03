@@ -8,10 +8,10 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-gem 'faraday'
+gem "faraday"
 
 
-gem 'httparty'
+gem "httparty"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -50,6 +50,10 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false # For Rails specific linting
+  # gem 'rubocop-rspec', require: false # If you use RSpec
+  # gem 'rubocop-performance', require: false
 end
 
 group :test do

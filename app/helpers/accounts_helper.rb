@@ -1,3 +1,2 @@
 module AccountsHelper
-
 end

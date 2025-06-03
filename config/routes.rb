@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :accounts
 
   root "accounts#index"
-  
+
   # Passing the input value to accounts controller.
-  post '/validate_vat', to: 'vat_send#validate_vat'
+  post "/validate_vat", to: "vat_send#validate_vat"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,46 +1,44 @@
 class VatValidation
-
   API_URI = URI.parse("https://ec.europa.eu/taxation_customs/vies/rest-api/check-vat-number")
   COUNTRY_CODE = "EL" # Hardcoded country code for Greece
 
   def self.sendVatToValidate(vat)
-    
     data = {
       countryCode: COUNTRY_CODE,
       vatNumber: vat
     }
-  
+
     begin
-      response = call_API(data)  #Make the call to the API
+      response = call_API(data)  # Make the call to the API
 
       if response.success?
-        
+
         entity_data = JSON.parse(response.body)
-  
+
         if entity_data["valid"]
           cleanResponse(entity_data) # Clean and extract relevant details if VAT is valid
         else
           entity_data # Return raw details if VAT is invalid
         end
       else
-        Rails.logger.error(response.status) 
+        Rails.logger.error(response.status)
         Rails.logger.error("Response Message: #{response.reason_phrase}")
         nil # Return nil on API error
       end
     rescue StandardError => e
       Rails.logger.error("A general error occurred: #{e.message}") # Catch and log any general exceptions
-      nil 
+      nil
     end
   end
 
-  
-  private 
 
-  def self.call_API(params) #Actual method that does the call. 
+  private
+
+  def self.call_API(params) # Actual method that does the call.
    conn = Faraday.new(url: API_URI)
 
        conn.post do |req|
-        req.headers['Content-Type'] = 'application/json'
+        req.headers["Content-Type"] = "application/json"
         req.body = params.to_json
       end
   end

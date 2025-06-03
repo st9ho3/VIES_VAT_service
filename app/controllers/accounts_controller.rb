@@ -1,4 +1,4 @@
-require_relative '../services/vat_validation'
+require_relative "../services/vat_validation"
 
 class AccountsController < ApplicationController
   before_action :set_account, only: %i[ show edit update destroy ]
