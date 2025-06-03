@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  vat: MyString
-  city: MyString
-  zipcode: MyString
-  address: MyString
+  name: "ΜΠΡΑΒΟΣ ΚΩΝΣΤΑΝΤΙΝΟΣ ΓΕΩΡΓΙΟΣ||LOUSIA"
+  vat: "123456789" 
+  city: "ΠΕΡΙΣΤΕΡΙ"
+  zipcode: "12345"  
+  address: "ΚΕΦΑΛΛΗΝΙΑΣ 29"
 
 two:
-  name: MyString
-  vat: MyString
-  city: MyString
-  zipcode: MyString
-  address: MyString
+  name: "ΑΝΩΝΥΜΟΣ ΕΤΑΙΡΕΙΑ ΜΕΤΑΦΟΡΩΝ ΕΚΜΕΤΑΛΛΕΥΣΕΩΣ ΕΜΠΟΡΙΑΣ ΚΑΙ ΠΑΡΟΧΗΣ ΥΠΗΡΕΣΙΩΝ Ο ΕΡΜΗΣ||ΕΡΜΗΣ Α.Ε.Μ.Ε.Ε."
+  vat: "987654321" 
+  city: "ΜΑΡΟΥΣΙ"
+  zipcode: "54321"   
+  address: "ΗΡΩΔΟΥ ΑΤΤΙΚΟΥ 12Α"

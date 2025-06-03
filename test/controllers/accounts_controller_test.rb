@@ -17,7 +17,7 @@ class AccountsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create account" do
     assert_difference("Account.count") do
-      post accounts_url, params: { account: { address: @account.address, city: @account.city, name: @account.name, vat: @account.vat, zipcode: @account.zipcode } }
+      post accounts_url, params: { account: { address: "ΓΑΜΜΑ ΜΟΝΑΔΙΚΗ 456", city: "ΠΑΤΡΑ", name: "ΜΠΕΚΙΟΣ ΧΑΡΑΛΑΜΠΟΣ ΚΑΙ ΣΙΑ", vat: "126756789", zipcode: "12345"  } }
     end
 
     assert_redirected_to account_url(Account.last)
